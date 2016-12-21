@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="campus.css">
+    <meta http-equiv="refresh" content="30" />
+</head>
+    <div class="wrapper">
+        <div id="map"></div>
+<!--
+        <div class="marker m1">
+          <h1>30</h1>
+          <span>W4-EW-322</span>
+            <div class="triangle"></div>
+        </div>
+-->
+    </div>
+    </body>
+
+    <script>
+    var threshold = 10;
+
+    for(var i=0; i < 5; i++){
+        var rc = rndCount();
+
+        $('.wrapper').append(
+        '<div class="marker m'+i+'">' +
+        '<div class="info">W'+i+'-EW-322</div>' +
+        '<span class="daCount"' +
+        (rc > threshold ? 'style="color: red;"':'style="color: white;"') +
+        '>'+rc+'</span>' +
+        '<div class="triangle"></div>' +
+        '</div>');
+
+        $(".daCount").delay(500).animate({"opacity": "1"}, 700);
+      };
+
+      function rndCount(){
+        return Math.floor(Math.random() * 20) + 0;
+      }
+
+    </script>
+</html>
