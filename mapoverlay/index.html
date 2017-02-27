@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/campus.css">
+    <meta http-equiv="refresh" content="30" />
+  
+</head>
+    <div class="wrapper">
+        <div id="map"></div>
+<!--
+        <div class="marker m1">
+          <h1>30</h1>
+          <span>W4-EW-322</span>
+            <div class="triangle"></div>
+        </div>
+-->
+    </div>
+    </body>
+
+    <script>
+    var threshold = 10;
+    var h = "";
+    var d = "";
+
+    for(var i=0; i < 5; i++){
+      whichSite(i);
+        var rc = rndCount();
+        $('.wrapper').append(
+        '<div class="marker m'+i+'">' +
+        '<div class="info">' +
+        '<div class="psname">'+h+'</div>' +
+        '<div class="psdetail">'+d+'</div>' +
+        '</div>' +
+        '<span class="daCount"' +
+        (rc > threshold ? 'style="color: red;"':'style="color: white;"') +
+        '>'+rc+'</span>' +
+        '<div class="triangle"></div>' +
+        '</div>');
+
+        $(".daCount").delay(500).animate({"opacity": "1"}, 700);
+      };
+
+      function rndCount(){
+        return Math.floor(Math.random() * 20) + 0;
+      }
+
+      function whichSite(m){
+        switch(m){
+          case 0:
+          h = "E2 pITstop";
+          d = "E2-1A-D31";
+            return;
+          case 1:
+            h = "W1 pITstop";
+            d = "W1-1B-B03";
+            return;
+          case 2:
+            h = "E3  pITstop";
+            d = "E3-1A-D31";
+            return;
+          case 3:
+          h = "E1 pITstop";
+          d = "E1-2B-C41";
+            return;
+          case 4:
+          h = "W4 pITstop";
+          d = "W4-1B-C07";
+            return;
+          default:
+          return "Not Config";
+        }
+      }
+
+    </script>
+</html>

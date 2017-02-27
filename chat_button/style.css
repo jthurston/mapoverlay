@@ -1,0 +1,47 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#slider {
+    position: absolute;
+    width: 200px;
+    height: 140px;
+    background-color: lightgrey;
+    color: white;    
+    top: 80px;
+    right: -220px;
+    text-align: center;
+    border: 1px grey solid;
+    line-height: 14px; 
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+}
+
+.helpheader {
+    color: black;
+}
+
+.helpertext {
+    color: black;
+    font-size: 14px;    
+}
+
+.chatbutton {
+    background:    #eee;
+
+background:    -webkit-linear-gradient(#eee, #999);
+background:    -o-linear-gradient(#eee, #999);
+background:    linear-gradient(#eee, #999);
+    border:        1px solid #569;
+    border-radius: 5px;
+    box-shadow:    0 1px 0 0 #444;
+    color:         #fff;
+    display:       inline-block;
+    padding:       4px 20px;
+    font:          normal 700 24px/1 "Calibri", sans-serif;
+    text-align:    center;
+    text-shadow:   1px 1px 0 #000;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

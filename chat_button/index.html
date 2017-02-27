@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Bouncy Button</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>                
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="animate.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <div>
+            <div id="chatbutton" class="chatbutton animated bounce">
+                <img src="button_image.png" style="height: 35px;"/>
+            </div>
+        </div>
+
+        <div id="slider" onclick="hideIt();">
+            <h3 class="helpheader"> NEED HELP?</h3>
+            <span class="helpertext">
+            If you need some help,
+            check out the new chat feature.
+            <img src="button_image.png" style="height: 30px; padding-top: 10px;" onmouseover="moveChat();" />
+            </span>
+        </div>
+<script>    
+
+    function showIt(){
+        $('#slider').animate({
+          right: '0px'
+        });        
+        moveChat();
+    }
+    setTimeout(showIt, 2000);
+
+    function moveChat(){
+        $('#chatbutton').removeClass('animated bounce');
+        $('#chatbutton').addClass('animated jello');        
+    }
+
+    function hideIt(){
+        $('#chatbutton').removeClass('animated jello');
+        $('#slider').animate({
+          right: '-220px'
+        });        
+        $('#chatbutton').addClass('animated pulse');
+    }
+
+</script>
+</body>
+</html>
